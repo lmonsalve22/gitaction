@@ -34,7 +34,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Hacer un test
-      run: python informeEpidemiologico.py
+      run: cd; python informeEpidemiologico.py
 
     - uses: peter-evans/create-pull-request@v2
       with:
