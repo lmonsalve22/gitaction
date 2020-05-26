@@ -35,7 +35,6 @@ Los productos que salen del informe epidemiologico son:
 28
 """
 
-import utils
 import pandas as pd
 from shutil import copyfile
 import glob
