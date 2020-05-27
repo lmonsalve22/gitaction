@@ -37,7 +37,7 @@ jobs:
       run: python informeEpidemiologico.py
 
 
-    - uses: peter-evans/create-pull-request@v2
+    - uses: ad-m/github-push-action@master
       with:
           commit_message: "Por favor confirma que esta todo bien"
           title: "Se actualizo el input de informe epidemiologico, y generamos los productos correspondientes"
