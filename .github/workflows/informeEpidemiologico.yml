@@ -46,12 +46,7 @@ jobs:
       uses: ad-m/github-push-action@master
 
       with:
-          commit_message: "Por favor confirma que esta todo bien"
-          title: "Se actualizo el input de informe epidemiologico, y generamos los productos correspondientes"
-          branch-suffix: timestamp
-          committer: minciencia github bot <actions@github.com>
-          reviewers: pdaire
-          base: master
+        github_token: ${{ secrets.GITHUB_TOKEN }}
           
     - name: update_API
       run: |
