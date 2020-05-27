@@ -43,7 +43,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -m "Add changes" -a
     - name: Push changes
-      uses: ad-m/github-push-actions@v2
+      uses: ad-m/github-push-actions@master
 
       with:
           commit_message: "Por favor confirma que esta todo bien"
