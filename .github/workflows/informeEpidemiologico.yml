@@ -37,7 +37,14 @@ jobs:
       run: python informeEpidemiologico.py
 
 
-    - uses: ad-m/github-push-action@master
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      
       with:
           commit_message: "Por favor confirma que esta todo bien"
           title: "Se actualizo el input de informe epidemiologico, y generamos los productos correspondientes"
