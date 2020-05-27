@@ -20,6 +20,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@master
+    #- uses: actions/checkout@v2
 
     # Sets up python
     - name: Set up Python 3.7
@@ -48,6 +49,15 @@ jobs:
 
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    #- uses: peter-evans/create-pull-request@v2
+    #  with:
+    #      commit_message: "Por favor confirma que esta todo bien"
+    #      title: "Se actualizo el input de informe epidemiologico, y generamos los productos correspondientes"
+    #      branch-suffix: timestamp
+    #      committer: minciencia github bot <actions@github.com>
+    #      reviewers: pdaire
+    #      base: master
           
     - name: update_API
       run: |
